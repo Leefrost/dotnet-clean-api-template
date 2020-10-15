@@ -1,8 +1,8 @@
 using System;
 
-namespace CleanApiTemplate.Api
+namespace CleanApiTemplate.Api.Controllers.Features.Forecasts
 {
-    public class WeatherForecast
+    public class WeatherForecastContract
     {
         public DateTime Date { get; set; }
 

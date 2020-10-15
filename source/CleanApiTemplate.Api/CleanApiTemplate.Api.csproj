@@ -9,5 +9,13 @@
     <PackageReference Include="MediatR" Version="9.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\Features\Locations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CleanApiTemplate.Application\CleanApiTemplate.Application.csproj" />
+  </ItemGroup>
+
 
 </Project>

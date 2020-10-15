@@ -17,6 +17,7 @@ namespace CleanApiTemplate.Persistence.Database
         public ForecastDbContext(DbContextOptions<ForecastDbContext> options) :
             base(options)
         {
+
         }
 
         public DbSet<WeatherForecast> WeatherForecasts { get; set; }
