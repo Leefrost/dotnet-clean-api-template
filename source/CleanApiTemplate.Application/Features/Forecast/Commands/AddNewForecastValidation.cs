@@ -6,7 +6,7 @@ namespace CleanApiTemplate.Application.Features.Forecast.Commands
     {
         public AddNewForecastValidation()
         {
-            RuleFor(x => x.CreationData.Summary).NotEmpty();
+            RuleFor(x => x.Summary).NotEmpty();
         }
     }
 }

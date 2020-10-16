@@ -16,6 +16,6 @@ namespace CleanApiTemplate.Domain.Entities.Locations
         
         public string City { get; set; }
 
-        public IList<WeatherForecast> Forecasts { get; }
+        public List<WeatherForecast> Forecasts { get; }
     }
 }
