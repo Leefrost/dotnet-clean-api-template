@@ -3,7 +3,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace CleanApiTemplate.Api.Controllers
+namespace CleanApiTemplate.Api.Features
 {
     [ApiController]
     [Route("api/[controller]")]

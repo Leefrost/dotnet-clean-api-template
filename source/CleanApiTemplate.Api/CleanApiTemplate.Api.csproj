@@ -10,7 +10,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\Features\Locations\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Features\Locations\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,6 +1,6 @@
 using System;
 
-namespace CleanApiTemplate.Api.Controllers.Features.Forecasts
+namespace CleanApiTemplate.Api.Features.Forecasts
 {
     public class WeatherForecastContract
     {
