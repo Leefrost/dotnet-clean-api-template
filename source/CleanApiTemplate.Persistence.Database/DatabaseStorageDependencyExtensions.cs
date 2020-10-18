@@ -1,0 +1,44 @@
+﻿using CleanApiTemplate.Application.Common;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace CleanApiTemplate.Persistence.Database
+{
+    public static class DatabaseStorageDependencyExtensions
+    {
+        public static IServiceCollection AddDbStorage(this IServiceCollection services, IConfiguration configuration)
+        {
+            if (configuration.GetValue<bool>("UseInMemoryDatabase"))
+            {
+                services.AddDbContext<ForecastDbContext>(options =>
+                    options.UseInMemoryDatabase("CleanApiTemplateDb"));
+            }
+            else
+            {
+                services.AddDbContext<ForecastDbContext>(options =>
+                    options.UseSqlServer(
+                        configuration.GetConnectionString("ForecastDbConnection"),
+                        b => b.MigrationsAssembly(typeof(ForecastDbContext).Assembly.FullName)));
+            }
+
+            services.AddScoped<IForecastDbContext>(provider => provider.GetService<ForecastDbContext>());
+
+            //services.AddScoped<IDomainEventService, DomainEventService>();
+
+            //services.AddDefaultIdentity<ApplicationUser>()
+            //    .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            //services.AddIdentityServer()
+            //    .AddApiAuthorization<ApplicationUser, ApplicationDbContext>();
+
+            //services.AddTransient<IDateTime, DateTimeService>();
+            //services.AddTransient<IIdentityService, IdentityService>();
+            //services.AddTransient<ICsvFileBuilder, CsvFileBuilder>();
+
+            //services.AddAuthentication().AddIdentityServerJwt();
+
+            return services;
+        }
+    }
+}

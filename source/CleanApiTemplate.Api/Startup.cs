@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CleanApiTemplate.Api.Infrastructure;
+using CleanApiTemplate.Persistence.Database;
+using CleanApiTemplate.Services.System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +29,10 @@ namespace CleanApiTemplate.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddApplication();
+            services.AddDbStorage(Configuration);
+            services.AddSystemServicesDependencies();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

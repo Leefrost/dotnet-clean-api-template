@@ -3,7 +3,7 @@ using CleanApiTemplate.Application.Common;
 
 namespace CleanApiTemplate.Services.System
 {
-    public class DateService: IDateService
+    public class DateTimeService: IDateTimeService
     {
         public DateTime Now => DateTime.Now;
     }

@@ -2,7 +2,7 @@
 
 namespace CleanApiTemplate.Application.Common
 {
-    public interface IDateService
+    public interface IDateTimeService
     {
         DateTime Now { get; }
     }

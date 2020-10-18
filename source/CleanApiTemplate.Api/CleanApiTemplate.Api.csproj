@@ -5,8 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="10.0.0" />
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="9.2.0" />
     <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,6 +19,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CleanApiTemplate.Application\CleanApiTemplate.Application.csproj" />
+    <ProjectReference Include="..\CleanApiTemplate.Persistence.Database\CleanApiTemplate.Persistence.Database.csproj" />
+    <ProjectReference Include="..\CleanApiTemplate.Services.System\CleanApiTemplate.Services.System.csproj" />
   </ItemGroup>
 
 
