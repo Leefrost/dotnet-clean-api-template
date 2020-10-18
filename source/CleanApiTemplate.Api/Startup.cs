@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 
 namespace CleanApiTemplate.Api
 {
@@ -29,10 +30,26 @@ namespace CleanApiTemplate.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddMvc();
 
             services.AddApplication();
             services.AddDbStorage(Configuration);
             services.AddSystemServicesDependencies();
+
+            services.AddHealthChecks();
+
+            services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1", new OpenApiInfo { Title = "CleanTemplate Web API", Version = "v1" });
+
+                options.AddSecurityDefinition("JWT", new OpenApiSecurityScheme
+                {
+                    Type = SecuritySchemeType.ApiKey,
+                    Name = "JWT authorization",
+                    In = ParameterLocation.Header,
+                    Description = "JWT token"
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,6 +59,21 @@ namespace CleanApiTemplate.Api
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseHealthChecks("/health");
+
+            app.UseSwagger(settings =>
+            {
+                settings.RouteTemplate = "api-docs/{documentName}/openapi.json";
+            });
+
+            app.UseSwaggerUI(settings =>
+            {
+                settings.DocumentTitle = "API Template description";
+                settings.RoutePrefix = "api-docs";
+                settings.SwaggerEndpoint("/api-docs/v1/openapi.json", "API Template description V1");
+
+            });
 
             app.UseHttpsRedirection();
 
