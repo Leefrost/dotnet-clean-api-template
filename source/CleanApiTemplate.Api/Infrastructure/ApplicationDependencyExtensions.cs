@@ -11,9 +11,16 @@ namespace CleanApiTemplate.Api.Infrastructure
     {
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
+            var assemblyList = new[]
+            {
+                typeof(BaseCqrsRequest<>).Assembly,
+                Assembly.GetExecutingAssembly()
+            };
+
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
-            services.AddMediatR(Assembly.GetExecutingAssembly());
+
+            services.AddMediatR(assemblyList);
 
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationPipeline<,>));
 

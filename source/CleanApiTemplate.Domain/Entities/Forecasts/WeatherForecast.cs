@@ -15,5 +15,6 @@ namespace CleanApiTemplate.Domain.Entities.Forecasts
         public string Summary { get; set; }
 
         public Location Location { get; set; }
+        public Guid LocationId { get; set; }
     }
 }

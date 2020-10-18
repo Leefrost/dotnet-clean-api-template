@@ -8,9 +8,12 @@ namespace CleanApiTemplate.Persistence.Database.Configurations
     {
         public void Configure(EntityTypeBuilder<Location> builder)
         {
-            builder.Property(t => t.City)
-                .HasMaxLength(200)
-                .IsRequired();
+            builder.HasKey(x => x.Id);
+            builder.ToTable("Locations");
+
+            builder.Property(t => t.City).IsRequired();
+
+            builder.HasMany(x => x.Forecasts).WithOne(x => x.Location).HasForeignKey(x => x.LocationId);
         }
     }
 }
