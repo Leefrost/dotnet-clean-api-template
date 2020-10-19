@@ -1,8 +1,5 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using CleanApiTemplate.Application.Common;
 using CleanApiTemplate.Persistence.Database;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -25,18 +22,15 @@ namespace CleanApiTemplate.Api
                 try
                 {
                     var context = services.GetRequiredService<ForecastDbContext>();
-
                     if (context.Database.IsSqlServer())
                     {
                         await context.Database.MigrateAsync();
                     }
-
                     await ForecastDbContextSeed.SeedBaseDataAsync(context);
                 }
                 catch (Exception ex)
                 {
                     var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
-
                     logger.LogError(ex, "An error occurred while migrating or seeding the database.");
 
                     throw;

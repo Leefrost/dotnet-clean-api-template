@@ -34,7 +34,7 @@ namespace CleanApiTemplate.Api
 
             services.AddApplication();
             services.AddDbStorage(Configuration);
-            services.AddSystemServicesDependencies();
+            services.AddSystemServices();
 
             services.AddHealthChecks();
 
@@ -72,7 +72,6 @@ namespace CleanApiTemplate.Api
                 settings.DocumentTitle = "API Template description";
                 settings.RoutePrefix = "api-docs";
                 settings.SwaggerEndpoint("/api-docs/v1/openapi.json", "API Template description V1");
-
             });
 
             app.UseHttpsRedirection();
