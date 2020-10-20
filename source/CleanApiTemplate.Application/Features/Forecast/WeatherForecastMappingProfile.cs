@@ -10,6 +10,7 @@ namespace CleanApiTemplate.Application.Features.Forecast
         public WeatherForecastMappingProfile()
         {
             CreateMap<AddNewForecastCommand, WeatherForecast>()
+                .ForMember(dest => dest.Id, opt => opt.Ignore())
                 .ForMember(dest => dest.Location, opt => opt.MapFrom(src => new Location { Id = src.LocationId }));
         }
     }
