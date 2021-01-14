@@ -9,25 +9,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{5F62C1B0-29E0-4480-A004-DA8F4A9560CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanApiTemplate.Api", "source\CleanApiTemplate.Api\CleanApiTemplate.Api.csproj", "{5D8410E6-F504-4126-BD6F-F26DB34DCEA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanApiTemplate.Api", "source\CleanApiTemplate.Api\CleanApiTemplate.Api.csproj", "{5D8410E6-F504-4126-BD6F-F26DB34DCEA1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".tests", ".tests", "{336BC210-C17C-48BC-8CEE-F2F68C27EE6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanApiTemplate.Application", "source\CleanApiTemplate.Application\CleanApiTemplate.Application.csproj", "{BEE01740-A613-4B13-9794-4138B194479C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanApiTemplate.Application", "source\CleanApiTemplate.Application\CleanApiTemplate.Application.csproj", "{BEE01740-A613-4B13-9794-4138B194479C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanApiTemplate.Domain", "source\CleanApiTemplate.Domain\CleanApiTemplate.Domain.csproj", "{2F53C455-EBB4-4B56-8F48-3C0F5314D879}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanApiTemplate.Domain", "source\CleanApiTemplate.Domain\CleanApiTemplate.Domain.csproj", "{2F53C455-EBB4-4B56-8F48-3C0F5314D879}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence", "Persistence", "{53525094-C77C-4DF8-B362-564CC99F7CC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanApiTemplate.Persistence.Database", "source\CleanApiTemplate.Persistence.Database\CleanApiTemplate.Persistence.Database.csproj", "{2164EAA3-98C5-4F71-80F5-4537D9869645}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanApiTemplate.Persistence.Database", "source\CleanApiTemplate.Persistence.Database\CleanApiTemplate.Persistence.Database.csproj", "{2164EAA3-98C5-4F71-80F5-4537D9869645}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{A73CE2F1-C81B-4F3C-BD0C-6DA13EBFA725}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanApiTemplate.Services.System", "source\CleanApiTemplate.Services.System\CleanApiTemplate.Services.System.csproj", "{3688383C-C757-4D39-AADB-A6260CB6412E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanApiTemplate.Services.System", "source\CleanApiTemplate.Services.System\CleanApiTemplate.Services.System.csproj", "{3688383C-C757-4D39-AADB-A6260CB6412E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanApiTemplate.UnitTests", "tests\CleanApiTemplate.UnitTests\CleanApiTemplate.UnitTests.csproj", "{3470D5F2-8FBE-4C49-8FC9-0347CCD2223E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanApiTemplate.UnitTests", "tests\CleanApiTemplate.UnitTests\CleanApiTemplate.UnitTests.csproj", "{3470D5F2-8FBE-4C49-8FC9-0347CCD2223E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanApiTemplate.IntegratedTests", "tests\CleanApiTemplate.IntegratedTests\CleanApiTemplate.IntegratedTests.csproj", "{BB20B3E3-C6D1-4746-A765-7BFA80DE61E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanApiTemplate.IntegratedTests", "tests\CleanApiTemplate.IntegratedTests\CleanApiTemplate.IntegratedTests.csproj", "{BB20B3E3-C6D1-4746-A765-7BFA80DE61E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
