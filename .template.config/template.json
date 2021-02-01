@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Sergii Lischuk",
+    "classifications": [
+        "Web",
+        "WebApi"
+    ],
+    "identity": "CleanApiTemplate.CSharp",
+    "name": "Web API with clean arcitecture",
+    "description": "Creates a new web api template with clean architecture",
+    "shortName": "clean-web-api",
+    "sourceName": "CleanApiTemplate",
+    "defaultName": "CleanApiTemplate",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    }
+}
