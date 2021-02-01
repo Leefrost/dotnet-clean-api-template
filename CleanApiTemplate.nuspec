@@ -2,12 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>CleanApiTemplate.WebApi.CSharp.Templates</id>
-    <version>0.0.1</version>
+    <version>1.0.0</version>
     <description>
       Creates an solution template with clean pre-installed architecture
     </description>
     <authors>Sergii Lischuk</authors>
     <projectUrl>https://github.com/Leefrost/dotnet-clean-api-template</projectUrl>
+    <repository type="git" url="https://github.com/Leefrost/dotnet-clean-api-template"/>
     <packageTypes>
       <packageType name="Template" />
     </packageTypes>

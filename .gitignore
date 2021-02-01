@@ -355,3 +355,4 @@ MigrationBackup/
 
 //nuget
 nuget.exe
+nuget.config
