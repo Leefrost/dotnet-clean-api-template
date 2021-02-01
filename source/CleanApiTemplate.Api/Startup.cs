@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CleanApiTemplate.Api.Infrastructure;
+using CleanApiTemplate.Api.Infrastructure.Identity;
 using CleanApiTemplate.Persistence.Database;
 using CleanApiTemplate.Services.System;
 using Microsoft.AspNetCore.Builder;
@@ -38,6 +39,7 @@ namespace CleanApiTemplate.Api
             services.AddSystemServices();
 
             services.AddHealthChecks();
+            services.AddAppAuthorization(Configuration);
 
             services.AddSwaggerGen(options =>
             {
@@ -79,7 +81,10 @@ namespace CleanApiTemplate.Api
 
             app.UseRouting();
 
+            app.UseAuthentication();
+            app.UseIdentityServer();
             app.UseAuthorization();
+
 
             app.UseEndpoints(endpoints =>
             {

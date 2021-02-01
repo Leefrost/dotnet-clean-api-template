@@ -29,6 +29,7 @@ namespace CleanApiTemplate.Api
                     {
                         await context.Database.MigrateAsync();
                     }
+
                     await ForecastDbContextSeed.SeedBaseDataAsync(context);
                 }
                 catch (Exception ex)
