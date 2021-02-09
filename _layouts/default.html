@@ -1,18 +1,8 @@
 ﻿<!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
 <head>
-
-    {% if site.google_analytics %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '{{ site.google_analytics }}');
-    </script>
-    {% endif %}
     <meta charset="UTF-8">
-    <link rel="shortcut icon" type="image/png" href="./assets/favicon-32x32.png">
+    <link rel="shortcut icon" type="image/png" href="https://github.com/Leefrost/dotnet-clean-api-template/blob/gh-pages/_layouts/assets/favicon-32x32.png">
 
     {% seo %}
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -21,10 +11,18 @@
     <meta name="theme-color" content="#80f">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <style>
+        .page-header {
+            background-color: #7B1FA2;
+            background-image: none !important;
+        }
+
+        .page-header .btn {
+            background-color: #9C27B0;
+        }
+    </style>
 </head>
   <body>
-    <a id="skip-to-content" href="#content">Skip to the content.</a>
-
     <header class="page-header" role="banner">
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
