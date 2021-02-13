@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
-    <id>CleanApiTemplate.WebApi.CSharp.Templates</id>
+    <id>Leefrost.Dotnet.Web.Api.ProjectTemplate</id>
     <version>1.0.0</version>
+    <title>ASP.NET Core Clean Web API</title>
     <description>
       Creates an solution template with clean pre-installed architecture
     </description>
@@ -12,6 +13,10 @@
     <packageTypes>
       <packageType name="Template" />
     </packageTypes>
+    <icon>content\.template.config\icon.png</icon>
+    <license type="expression">MIT</license>
+    <copyright>Sergii Lischuk, 2021</copyright>
+    <tags>dotnet web webapi dotnet-template clean-architecture</tags>
   </metadata>
   <files>
     <file src="source\**" target="content\source" exclude="source\**\bin\**;source\**\obj\**"/>
@@ -20,5 +25,7 @@
     <file src="README.md" target="content\README.md"/>
     <file src=".gitignore" target="content\.gitignore"/>
     <file src=".template.config\template.json" target="content\.template.config\template.json"/>
+    <file src=".template.config\ide.host.json" target="content\.template.config\ide.host.json"/>
+    <file src=".template.config\icon.png" target="content\.template.config\icon.png"/>
   </files>
 </package>

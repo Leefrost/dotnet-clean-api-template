@@ -3,11 +3,12 @@
     "author": "Sergii Lischuk",
     "classifications": [
         "Web",
-        "WebApi"
+        "WebApi",
+        "API"
     ],
     "identity": "CleanApiTemplate.CSharp",
-    "name": "Web API with clean arcitecture",
-    "description": "Creates a new web api template with clean architecture",
+    "name": "ASP.NET Core Clean Web API",
+    "description": "Creates a new Web API template with clean and strict architecture",
     "shortName": "clean-web-api",
     "sourceName": "CleanApiTemplate",
     "defaultName": "CleanApiTemplate",
