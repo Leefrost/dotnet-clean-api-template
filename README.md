@@ -2,7 +2,7 @@
     <img src="/.artifacts/clean-api-preview.jpg" height="320" width="640" alt="Clean API template" align="center">
 </div>
 <big>
-  <h1 align="center">Clean API template</h1>
+  <h1 align="center">Clean ASP.NET Web API template</h1>
 </big>
 <p align="center">
   <big>
