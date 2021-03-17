@@ -64,11 +64,14 @@ To use `dotnet-ef` for your migrations please add the following flags to your co
 
 For example, to add a new migration from the root folder:
 
-`dotnet ef migrations add "CreateDb" --project source/<Project name>.Persistence.Database --startup-project src/<Project name>.Api --output-dir Migrations`
-
+```powershell
+dotnet ef migrations add "CreateDb" --project source/<Project name>.Persistence.Database --startup-project src/<Project name>.Api --output-dir Migrations`
+```
 and
 
-`dotnet ef database update --project source/<Project name>.Persistence.Database --startup-project src/<Project name>.Api`
+```powershell
+dotnet ef database update --project source/<Project name>.Persistence.Database --startup-project src/<Project name>.Api`
+```
 
 ### Logging
 
